@@ -1,0 +1,35 @@
+This list of timezone codes was retrieved on 18-Feb-2020 using
+./get-vcal-data.sh filename list anything
+(where anything can be anything)
+Contents of allowed formatted placenames can be gotten via
+./get-vcal-data.sh filename 25 place-list
+(where 25 for Eastern US is an example and place-list is a literal value)
+
+<option value='0'>00:00 Greenwich Mean Time: London, Lisbon</option>
+<option value='1'>+01:00 Amsterdam, Berlin, Rome</option>
+<option value='2'>+02:00 Athens, Helsinki, Tel Aviv, Vilnius</option>
+<option value='3'>+03:00 Bagdad, Moscow, Nairobi, Riyadh</option>
+<option value='350'>+03:30 Teheran</option>
+<option value='4'>+04:00 Abu Dhabi, Tbilisi, Baku</option>
+<option value='5'>+05:00 Chelyabinsk, Ekaterinburg, Ufa</option>
+<option value='550'>+05:30 India</option>
+<option value='575'>+05:45 Nepal</option>
+<option value='6'>+06:00 Dhaka, Astana</option>
+<option value='7'>+07:00 Bangkok, Hanoi</option>
+<option value='8'>+08:00 Beijing, Kuala Lumpur, Perth, Taipei</option>
+<option value='9'>+09:00 Seoul, Tokyo</option>
+<option value='950'>+09:30 Adelaide</option>
+<option value='10'>+10:00 Brisbane, Hobart, Khabarovsk, Aust</option>
+<option value='11'>+11:00 Yuzhno-Sakhalinsk</option>
+<option value='12'>+12:00 Fiji, Marshall Islands, New Zealand</option>
+<option value='21'>-01:00 Azores</option>
+<option value='23'>-03:00 Buenos Aires</option>
+<option value='2350'>-03:30 Newfoundland</option>
+<option value='2375'>-03:45 Berbice</option>
+<option value='24'>-04:00 Atlantic, Caracas, Cochabamba, La Paz</option>
+<option value='25'>-05:00 Eastern</option>
+<option value='26'>-06:00 Central Time</option>
+<option value='27'>-07:00 Moutain Time</option>
+<option value='28'>-08:00 Pacific Time</option>
+<option value='210'>-10:00 Hawaii</option>
+
