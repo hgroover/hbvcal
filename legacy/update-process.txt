@@ -1,0 +1,43 @@
+vcal update process
+
+List of supported zipcodes:
+92105 (San Diego)
+94102 (San Francisco)
+90023 (Los Angeles)
+78721 (Austin)
+33125 (Miami)
+33607 (Tampa)
+32615 (Alachua)
+
+Dropped as of Feb-2020:
+97212 (Portland)
+
+In
+~/Documents/vcal
+
+About 1x year; last run, Jan 2021:
+./get-vcal2.pl --zip=92105
+(should get .vcal-data/92105-start-end.{ics,raw,txt})
+Possible required modules on ubuntu:
+libdbi-perl libmail-sendmail-perl
+
+On henry.groover google calendar account:
+Changed as of 2020: Go to calendar, settings, import
+Was: Click on dropdown next to "My calendars" then select settings
+Import calendar
+Select ics and import to
+vcal 92105
+
+Show all 3 other calendars and repeat above steps,
+check display, then hide other 3
+
+To add a new location:
+Go to Vaishnava Calendar on purebhakti.com
+View source and get the 2-digit timezone code, make sure it's in get-vcal2.pl
+(e.g. 25 for Eastern, 210 for Hawaii)
+Note the lat and lon in the location
+Run ./closest-zip.sh lon lat (with format 080W15 25N47 OR -80.25543 25.7723)
+Top entry from results should be closest
+Update get-vcal2.pl and make sure time zone data as well as zip code map are updated
+Follow above process from ./get-vcal2.pl
+
