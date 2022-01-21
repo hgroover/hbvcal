@@ -16,8 +16,10 @@ In
 ~/Documents/vcal
 
 About 1x year; last run, Jan 2021:
-./get-vcal2.pl --zip=92105
-(should get .vcal-data/92105-start-end.{ics,raw,txt})
+./get-vcal2.pl --zip=78721
+(should get .vcal-data/78721-start-end.{ics,raw,txt})
+If .vcal-data/78721-start-end.raw already exists, we'll skip the download
+After fetching the raw file, processing is done via parse-vcal.pl (unless both the ics and txt files exist)
 Possible required modules on ubuntu:
 libdbi-perl libmail-sendmail-perl
 
