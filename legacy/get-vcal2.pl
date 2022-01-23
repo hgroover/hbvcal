@@ -65,6 +65,7 @@ my %location_data = (
 	"98112" => [ "Seattle, Washington, USA", "122W15", "47N37", "-8.00", "-0800", "America/Los_Angeles" ],
 	"78721" => [ "Austin, Texas, USA", "097W41", "30N16", "-6.00", "-0600", "America/Chicago" ],
 	"32615" => [ "Alachua, Florida, USA", "082W30", "29N48", "-5.00", "-0500", "America/New_York" ],
+	"32801" => [ "Orlando, Florida, USA", "081W23", "28N32", "-5.00", "-0500", "America/New_York" ],
 	"33125" => [ "Miami, Florida, USA", "080W15", "25N47", "-5.00", "-0500", "America/New_York" ],
 #	"34120" => [ "Naples, Florida, USA", "081W36", "26N17", "-5.00", "-0500", "America/New_York" ],
 	"33607" => [ "Tampa, Florida, USA", "082W29", "27N59", "-5.00", "-0500", "America/New_York" ]

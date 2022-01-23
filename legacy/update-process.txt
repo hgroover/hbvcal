@@ -8,6 +8,7 @@ List of supported zipcodes:
 33125 (Miami)
 33607 (Tampa)
 32615 (Alachua)
+32801 (Orlando)
 
 Dropped as of Feb-2020:
 97212 (Portland)
