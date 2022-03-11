@@ -30,11 +30,35 @@ my $cal_tz = "America/Los_Angeles"; # TZ= value to pass to date
 my $cal_tzhhmm = ""; #"-0800"; 
 
 # Lookup for tz to timezone codes
+# Updated 11-Mar-2022 from full list
 my %tcodelookup;
-$tcodelookup{"-0500"} = "25";
-$tcodelookup{"-0600"} = "26";
-$tcodelookup{"-0700"} = "27";
-$tcodelookup{"-0800"} = "28";
+$tcodelookup{"0000"} = "0"; # Greenwich Mean Time: London, Lisbon
+$tcodelookup{"+0100"} = "1"; # Amsterdam, Berlin, Rome
+$tcodelookup{"+0200"} = "2"; # Athens, Helsinki, Tel Aviv, Vilnius
+$tcodelookup{"+0300"} = "3"; # Bagdad, Moscow, Nairobi, Riyadh
+$tcodelookup{"+0330"} = "350"; # Teheran
+$tcodelookup{"+0400"} = "4"; # Abu Dhabi, Tbilisi, Baku
+$tcodelookup{"+0500"} = "5"; # Chelyabinsk, Ekaterinburg, Ufa
+$tcodelookup{"+0530"} = "550"; # India
+$tcodelookup{"+0545"} = "575"; # Nepal
+$tcodelookup{"+0600"} = "6"; # Dhaka, Astana
+$tcodelookup{"+0700"} = "7"; # Bangkok, Hanoi
+$tcodelookup{"+0800"} = "8"; # Beijing, Kuala Lumpur, Perth, Taipei
+$tcodelookup{"+0900"} = "9"; # Seoul, Tokyo
+$tcodelookup{"+0930"} = "950"; # Adelaide
+$tcodelookup{"+1000"} = "10"; # Brisbane, Hobart, Khabarovsk, Aust
+$tcodelookup{"+1100"} = "11"; # Yuzhno-Sakhalinsk
+$tcodelookup{"+1200"} = "12"; # Fiji, Marshall Islands, New Zealand
+$tcodelookup{"-0100"} = "21"; # Azores
+$tcodelookup{"-0300"} = "23"; # Buenos Aires
+$tcodelookup{"-0330"} = "2350"; # Newfoundland
+$tcodelookup{"-0345"} = "2375"; # Berbice
+$tcodelookup{"-0400"} = "24"; # Atlantic, Caracas, Cochabamba, La Paz
+$tcodelookup{"-0500"} = "25"; # Eastern
+$tcodelookup{"-0600"} = "26"; # Central Time
+$tcodelookup{"-0700"} = "27"; # Mountain Time
+$tcodelookup{"-0800"} = "28"; # Pacific Time
+$tcodelookup{"-1000"} = "210"; # Hawaii
 
 # Defined location data. Now skipping sunrise-rss2.php, we get (0-3 are all from select dropdown, 4 is from zipcode db)
 #  [0] = placename, e.g. "Austin, Texas, USA" (must match entries listed in placelist-*.txt)
