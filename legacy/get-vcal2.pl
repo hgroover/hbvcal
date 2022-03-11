@@ -87,7 +87,7 @@ my %location_data = (
 	"US-33607" => [ "Tampa, Florida, USA", "082W29", "27N59", "-5.00", "-0500", "America/New_York" ],
 	"IN-741302" => [ "Navadwip, W. Bengal, India", "088E22", "23N25", "+5.30", "+0530", "Asia/Calcutta" ],
 	"IN-110058" => [ "New Delhi, India", "077E12", "28N36", "+5.30", "+0530", "Asia/Calcutta" ],
-	"UK-SW1A1AA" => [ "London, England, UK", "000W10", "51N30", "+0.00", "Europe/London" ]
+	"UK-SW1A1AA" => [ "London, England, UK", "000W10", "51N30", "+0.00", "+0000", "Europe/London" ]
 );
 
 # Timezone location exceptions
