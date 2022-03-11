@@ -29,14 +29,6 @@ my $cal_tz = "America/Los_Angeles"; # TZ= value to pass to date
 # Juneau is America/Juneau - all other Pacific time locations are the same
 my $cal_tzhhmm = ""; #"-0800"; 
 
-# Lookup for tz to zoneinfo name
-my %tzlookup;
-# Avoid Arizona, Indiana, Kentucky and other sticky areas for now
-$tzlookup{"USA-0900"} = "America/Juneau";
-$tzlookup{"USA-0800"} = "America/Los_Angeles";
-$tzlookup{"USA-0600"} = "America/Chicago";
-$tzlookup{"USA-0500"} = "America/New_York";
-
 # Lookup for tz to timezone codes
 my %tcodelookup;
 $tcodelookup{"-0500"} = "25";
