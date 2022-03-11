@@ -32,7 +32,7 @@ my $cal_tzhhmm = ""; #"-0800";
 # Lookup for tz to timezone codes
 # Updated 11-Mar-2022 from full list
 my %tcodelookup;
-$tcodelookup{"0000"} = "0"; # Greenwich Mean Time: London, Lisbon
+$tcodelookup{"+0000"} = "0"; # Greenwich Mean Time: London, Lisbon
 $tcodelookup{"+0100"} = "1"; # Amsterdam, Berlin, Rome
 $tcodelookup{"+0200"} = "2"; # Athens, Helsinki, Tel Aviv, Vilnius
 $tcodelookup{"+0300"} = "3"; # Bagdad, Moscow, Nairobi, Riyadh
