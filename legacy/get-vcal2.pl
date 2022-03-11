@@ -22,7 +22,7 @@ my $output = "vcal.ics";
 my $min_date = "20101201";
 my $max_date = "20111231";
 
-my $zip_hash = 0;
+my $zip_hash = "";
 my $cal_tz = "America/Los_Angeles"; # TZ= value to pass to date
 # The timezone hhmm value calendar was calculated for - always ignores DST
 # Format returned by date +'%z' - parsed out of Current location: line
@@ -68,23 +68,25 @@ $tcodelookup{"-1000"} = "210"; # Hawaii
 #  [4] = tzhhmm "-0600" (lcl_tz) (new)
 #  [5] = tzregion "America/New_York" (new)
 my %location_data = (
-	"95521" => [ "Arcata, California, USA", "124W05", "40N52", "-8.00", "-0800", "America/Los_Angeles" ],
-	"93641" => [ "Badger, CA", "119W01", "36N38", "-8.00", "-0800", "America/Los_Angeles" ],
-	"94702" => [ "Berkeley, California, USA", "122W17", "37N52", "-8.00", "-0800", "America/Los_Angeles" ],
-	"97405" => [ "Eugene, Oregon, USA", "123W08", "44N00", "-8.00", "-0800", "America/Los_Angeles" ],
-	"99801" => [ "Juneau, Alaska, USA", "134W30", "58N26", "-8.00", "-0900", "America/Juneau" ], # Lie! Juneau is GMT-9, not GMT-8
-	"90023" => [ "Los Angeles, California, USA", "118W12", "34N00", "-8.00", "-0800", "America/Los_Angeles" ],
-	"97212" => [ "Portland, Oregon, USA", "122W38", "45N34", "-8.00", "-0800", "America/Los_Angeles" ],
-	"92105" => [ "San Diego, California, USA", "117W05", "32N45", "-8.00", "-0800", "America/Los_Angeles" ],
-	"94102" => [ "San Francisco, CA, USA", "122W25", "37N46", "-8.00", "-0800", "America/Los_Angeles" ],
-	"95050" => [ "San Jose, California, USA", "121W57", "37N22", "-8.00", "-0800", "America/Los_Angeles" ],
-	"98112" => [ "Seattle, Washington, USA", "122W15", "47N37", "-8.00", "-0800", "America/Los_Angeles" ],
-	"78721" => [ "Austin, Texas, USA", "097W41", "30N16", "-6.00", "-0600", "America/Chicago" ],
-	"32615" => [ "Alachua, Florida, USA", "082W30", "29N48", "-5.00", "-0500", "America/New_York" ],
-	"32801" => [ "Orlando, Florida, USA", "081W23", "28N32", "-5.00", "-0500", "America/New_York" ],
-	"33125" => [ "Miami, Florida, USA", "080W15", "25N47", "-5.00", "-0500", "America/New_York" ],
-#	"34120" => [ "Naples, Florida, USA", "081W36", "26N17", "-5.00", "-0500", "America/New_York" ],
-	"33607" => [ "Tampa, Florida, USA", "082W29", "27N59", "-5.00", "-0500", "America/New_York" ]
+	"US-95521" => [ "Arcata, California, USA", "124W05", "40N52", "-8.00", "-0800", "America/Los_Angeles" ],
+	"US-93641" => [ "Badger, CA", "119W01", "36N38", "-8.00", "-0800", "America/Los_Angeles" ],
+	"US-94702" => [ "Berkeley, California, USA", "122W17", "37N52", "-8.00", "-0800", "America/Los_Angeles" ],
+	"US-97405" => [ "Eugene, Oregon, USA", "123W08", "44N00", "-8.00", "-0800", "America/Los_Angeles" ],
+	"US-99801" => [ "Juneau, Alaska, USA", "134W30", "58N26", "-8.00", "-0900", "America/Juneau" ], # Lie! Juneau is GMT-9, not GMT-8
+	"US-90023" => [ "Los Angeles, California, USA", "118W12", "34N00", "-8.00", "-0800", "America/Los_Angeles" ],
+	"US-97212" => [ "Portland, Oregon, USA", "122W38", "45N34", "-8.00", "-0800", "America/Los_Angeles" ],
+	"US-92105" => [ "San Diego, California, USA", "117W05", "32N45", "-8.00", "-0800", "America/Los_Angeles" ],
+	"US-94102" => [ "San Francisco, CA, USA", "122W25", "37N46", "-8.00", "-0800", "America/Los_Angeles" ],
+	"US-95050" => [ "San Jose, California, USA", "121W57", "37N22", "-8.00", "-0800", "America/Los_Angeles" ],
+	"US-98112" => [ "Seattle, Washington, USA", "122W15", "47N37", "-8.00", "-0800", "America/Los_Angeles" ],
+	"US-78721" => [ "Austin, Texas, USA", "097W41", "30N16", "-6.00", "-0600", "America/Chicago" ],
+	"US-32615" => [ "Alachua, Florida, USA", "082W30", "29N48", "-5.00", "-0500", "America/New_York" ],
+	"US-32801" => [ "Orlando, Florida, USA", "081W23", "28N32", "-5.00", "-0500", "America/New_York" ],
+	"US-33125" => [ "Miami, Florida, USA", "080W15", "25N47", "-5.00", "-0500", "America/New_York" ],
+#	"US-34120" => [ "Naples, Florida, USA", "081W36", "26N17", "-5.00", "-0500", "America/New_York" ],
+	"US-33607" => [ "Tampa, Florida, USA", "082W29", "27N59", "-5.00", "-0500", "America/New_York" ],
+	"IN-741302" => [ "Navadwip, W. Bengal, India", "088E22", "23N25", "+5.30", "+0530", "Asia/Calcutta" ]
+	
 );
 
 # Timezone location exceptions
@@ -100,9 +102,9 @@ main();
 
 sub main()
 {
-	die( "No --zip=zipcode specified" ) unless ($zip_hash != 0);
+	die( "No --zip=zipcode specified" ) unless ($zip_hash ne "");
 
-	die( "Location data not defined" ) unless defined( @location_data{$zip_hash} );
+	die( "Location data not defined for zip $zip_hash" ) unless defined( @location_data{$zip_hash} );
 
 #wget -O - http://henrygroover.net/sunrise-rss2?zip=$1 returns
 #...
@@ -150,11 +152,12 @@ sub main()
 
 	die( "No tcodelookup" ) unless defined( $tcodelookup{$tzval} );
 	printf( "Timezone code[%s] = %s\n", $tzval, $tcodelookup{$tzval} );
-	# FIXME Check for timezone format - is it decimal hours or hh.mm
+	# Timezone format is hh.mm
 	my $tzd = $tzval / 100.0;
 	if ($tzval % 100 != 0)
 	{
-		die( "Unsure of decimal timezone format on $tzval" );
+		$tzd = ($tzval - ($tzval % 100)) / 100.0 + ($tzval % 100) / 60.0;
+		printf( "Converted %s to decimal %f\n", $tzval, $tzd );
 	}
 		# Formatted location was used with a previous calendar version that allowed ad-hoc
 		# lat/lon. Now a tzcode and formatted location matching existing list entries must
@@ -183,8 +186,13 @@ sub main()
 #LOCATION="Victoria, Canada              123W19 48N18     -8.00"
 #LOCATION="Walla Walla, Washington, USA  118W18 46N05     -8.00"
 
-		my $location_fmt = sprintf( "%-29.29s %-6.6s %-5.5s %9.2f",
-			$placename, $geo_hmlon, $geo_hmlat, $tzval / 100.0 );
+		my $prefixed_tz = sprintf("%.2f", $tzval / 100);
+		if ($prefixed_tz =~ /\d+.*/)
+		{
+			$prefixed_tz = sprintf("+%s", $prefixed_tz);
+		}
+		my $location_fmt = sprintf( "%-29.29s %-6.6s %-5.5s %9s",
+			$placename, $geo_hmlon, $geo_hmlat, $prefixed_tz );
 		my $data_dir = ".vcal-data";
 		if (-d $data_dir)
 		{
@@ -256,9 +264,11 @@ sub parse_options()
     my $opt;
     foreach $opt (@_)
     {
+		#printf( "parse %s\n", $opt );
     	if ($opt =~ /--zip=(.*)/)
     	{
     		$zip_hash = $1;
+			#printf( "got zip_hash %s\n", $zip_hash );
 		next;
     	}
 	if ($opt =~ /--output=(.*)/)

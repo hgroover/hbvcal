@@ -1,5 +1,9 @@
 vcal update process
 
+11-March-2022 update - although we still support bare US zipcodes, the "zipcode" parameter
+now refers to a code made of the two-letter ISO-639 country code followed by hyphen and the
+closest in-country postal code. Thus, for example, Navadwip is now IN-741302
+
 List of supported zipcodes:
 92105 (San Diego)
 94102 (San Francisco)
@@ -9,6 +13,7 @@ List of supported zipcodes:
 33607 (Tampa)
 32615 (Alachua)
 32801 (Orlando)
+IN-741302 (Navadwip)
 
 Dropped as of Feb-2020:
 97212 (Portland)
@@ -16,8 +21,8 @@ Dropped as of Feb-2020:
 In
 ~/Documents/vcal
 
-About 1x year; last run, Jan 2021:
-./get-vcal2.pl --zip=78721
+About 1x year; last run, Feb 2022:
+./get-vcal2.pl --zip=US-78721
 (should get .vcal-data/78721-start-end.{ics,raw,txt})
 If .vcal-data/78721-start-end.raw already exists, we'll skip the download
 After fetching the raw file, processing is done via parse-vcal.pl (unless both the ics and txt files exist)
@@ -39,8 +44,74 @@ Go to Vaishnava Calendar on purebhakti.com
 View source and get the 2-digit timezone code, make sure it's in get-vcal2.pl
 (e.g. 25 for Eastern, 210 for Hawaii)
 Note the lat and lon in the location
+
+US locations:
 Run ./closest-zip.sh lon lat (with format 080W15 25N47 OR -80.25543 25.7723)
 Top entry from results should be closest
+
+Outside US:
+Look on Google Maps. Find a postal code from the selected location. Construct XX-pcode
+where XX is the two-letter ISO-639 country code, e.g. IN for India, UK for United Kingdom,
+etc.
+
 Update get-vcal2.pl and make sure time zone data as well as zip code map are updated
 Follow above process from ./get-vcal2.pl
 
+Locations for time zone 5:30 (India):
+<select class="cal-select" name="location" size="1">
+<option value="0">Select a nearby location</option>
+<option value="Agartala, Tripura, India      091E16 23N49     +5.30">Agartala, Tripura, India      091E16 23N49     +5.30</option>
+<option value="Ahmedabad, Gujarat, India     072E37 23N02     +5.30">Ahmedabad, Gujarat, India     072E37 23N02     +5.30</option>
+<option value="Allahabad, U.P., India        081E50 25N29     +5.30">Allahabad, U.P., India        081E50 25N29     +5.30</option>
+<option value="Aurangabad, Maharashtra, India075E20 19N54     +5.30">Aurangabad, Maharashtra, India075E20 19N54     +5.30</option>
+<option value="Baleshwar, Orrisa, India      086E55 21N29     +5.30">Baleshwar, Orrisa, India      086E55 21N29     +5.30</option>
+<option value="Bangalore, Karnataka, India   077E35 12N59     +5.30">Bangalore, Karnataka, India   077E35 12N59     +5.30</option>
+<option value="Baroda (Vadodara), India      073E13 22N18     +5.30">Baroda (Vadodara), India      073E13 22N18     +5.30</option>
+<option value="Bela, Jharkhand, India        084E46 24N27     +5.30">Bela, Jharkhand, India        084E46 24N27     +5.30</option>
+<option value="Belgaum, Karnataka, India     074E30 15N50     +5.30">Belgaum, Karnataka, India     074E30 15N50     +5.30</option>
+<option value="Bhubaneswar, Orissa, India    085E50 20N14     +5.30">Bhubaneswar, Orissa, India    085E50 20N14     +5.30</option>
+<option value="Bombay (Mumbai), India        072E55 18N58     +5.30">Bombay (Mumbai), India        072E55 18N58     +5.30</option>
+<option value="Buxar, India                  083E59 25N35     +5.30">Buxar, India                  083E59 25N35     +5.30</option>
+<option value="Calcutta, W. Bengal, India    088E23 22N35     +5.30">Calcutta, W. Bengal, India    088E23 22N35     +5.30</option>
+<option value="Chandigarh, India             076E55 30N44     +5.30">Chandigarh, India             076E55 30N44     +5.30</option>
+<option value="Chennai (Madras), T.N., India 080E17 13N05     +5.30">Chennai (Madras), T.N., India 080E17 13N05     +5.30</option>
+<option value="Coimbatore, T.N., India       076E58 10N59     +5.30">Coimbatore, T.N., India       076E58 10N59     +5.30</option>
+<option value="Colombo, Sri Lanka            079E51 06N56     +5.30">Colombo, Sri Lanka            079E51 06N56     +5.30</option>
+<option value="Dimapur, India                093E44 25N54     +5.30">Dimapur, India                093E44 25N54     +5.30</option>
+<option value="Dwaraka, Gujarat, India       069E01 22N17     +5.30">Dwaraka, Gujarat, India       069E01 22N17     +5.30</option>
+<option value="Gaya, India                   085E00 24N27     +5.30">Gaya, India                   085E00 24N27     +5.30</option>
+<option value="Guntur, A.P., India           080E27 16N18     +5.30">Guntur, A.P., India           080E27 16N18     +5.30</option>
+<option value="Guwahati, Assam, India        091E44 26N11     +5.30">Guwahati, Assam, India        091E44 26N11     +5.30</option>
+<option value="Hardwar, U.P., India          078E10 29N58     +5.30">Hardwar, U.P., India          078E10 29N58     +5.30</option>
+<option value="Hyderabad, A.P., India        078E28 17N23     +5.30">Hyderabad, A.P., India        078E28 17N23     +5.30</option>
+<option value="Imphal, Manipur, India        093E57 24N49     +5.30">Imphal, Manipur, India        093E57 24N49     +5.30</option>
+<option value="Jaipur, Rajasthan, India      075E48 26N55     +5.30">Jaipur, Rajasthan, India      075E48 26N55     +5.30</option>
+<option value="Kashipur, U.K., India         078E57 29N13     +5.30">Kashipur, U.K., India         078E57 29N13     +5.30</option>
+<option value="Lucknow, U.P., India          080E56 26N49     +5.30">Lucknow, U.P., India          080E56 26N49     +5.30</option>
+<option value="Madras (Chennai), T.N., India 080E17 13N05     +5.30">Madras (Chennai), T.N., India 080E17 13N05     +5.30</option>
+<option value="Mangalore, Karnataka, India   074E47 12N49     +5.30">Mangalore, Karnataka, India   074E47 12N49     +5.30</option>
+<option value="Mathura, U.P., India          077E41 27N30     +5.30">Mathura, U.P., India          077E41 27N30     +5.30</option>
+<option value="Mayapur, W. Bengal, India     088E22 23N28     +5.30">Mayapur, W. Bengal, India     088E22 23N28     +5.30</option>
+<option value="Moirang, Manipur, India       093E43 24N30     +5.30">Moirang, Manipur, India       093E43 24N30     +5.30</option>
+<option value="Mumbai (Bombay), India        072E55 18N58     +5.30">Mumbai (Bombay), India        072E55 18N58     +5.30</option>
+<option value="Nagpur, Maharashtra, India    079E06 21N09     +5.30">Nagpur, Maharashtra, India    079E06 21N09     +5.30</option>
+<option value="Navadwip, W. Bengal, India    088E22 23N25     +5.30">Navadwip, W. Bengal, India    088E22 23N25     +5.30</option>
+<option value="New Delhi, India              077E12 28N36     +5.30">New Delhi, India              077E12 28N36     +5.30</option>
+<option value="Pandharpur, Maharashtra, India075E20 17N40     +5.30">Pandharpur, Maharashtra, India075E20 17N40     +5.30</option>
+<option value="Patna, Bihar, India           085E07 25N36     +5.30">Patna, Bihar, India           085E07 25N36     +5.30</option>
+<option value="Pune, Maharashtra, India      073E52 18N32     +5.30">Pune, Maharashtra, India      073E52 18N32     +5.30</option>
+<option value="Puri, Orissa, India           085E50 19N48     +5.30">Puri, Orissa, India           085E50 19N48     +5.30</option>
+<option value="Secunderabad, A.P., India     078E29 17N27     +5.30">Secunderabad, A.P., India     078E29 17N27     +5.30</option>
+<option value="Silchar, Assam, India         092E48 24N49     +5.30">Silchar, Assam, India         092E48 24N49     +5.30</option>
+<option value="Siliguri, W. Bengal, India    088E26 26N42     +5.30">Siliguri, W. Bengal, India    088E26 26N42     +5.30</option>
+<option value="Srirangam, T.N., India        078E44 10N48     +5.30">Srirangam, T.N., India        078E44 10N48     +5.30</option>
+<option value="Surat, Gujarat, India         072E50 21N10     +5.30">Surat, Gujarat, India         072E50 21N10     +5.30</option>
+<option value="Thiruvananthapuram, India     076E55 08N29     +5.30">Thiruvananthapuram, India     076E55 08N29     +5.30</option>
+<option value="Tirupati, A.P., India         079E25 13N39     +5.30">Tirupati, A.P., India         079E25 13N39     +5.30</option>
+<option value="Trivandrum, Kerala, India     076E55 08N29     +5.30">Trivandrum, Kerala, India     076E55 08N29     +5.30</option>
+<option value="Udhampur, J.K., India         075E08 32N56     +5.30">Udhampur, J.K., India         075E08 32N56     +5.30</option>
+<option value="Vadodara (Baroda), India      073E13 22N18     +5.30">Vadodara (Baroda), India      073E13 22N18     +5.30</option>
+<option value="Varanasi, India               082E59 25N16     +5.30">Varanasi, India               082E59 25N16     +5.30</option>
+<option value="Vellore, T.N., India          079E08 12N56     +5.30">Vellore, T.N., India          079E08 12N56     +5.30</option>
+<option value="Vrindavan, U.P., India        077E42 27N35     +5.30">Vrindavan, U.P., India        077E42 27N35     +5.30</option>
+</select>

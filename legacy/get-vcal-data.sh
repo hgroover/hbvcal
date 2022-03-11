@@ -5,7 +5,7 @@ URL=http://www.purebhakti.com/resources/vaisnava-calendar-mainmenu-71.html
 # Switched to https in 2020
 URL=https://www.purebhakti.com/resources/vaisnava-calendar
 OUTPUT="$1"
-TIMEZONE=$2
+TIMEZONE="$2"
 LOCATION="$3"
 [ "${LOCATION}" ] || { echo "Syntax: $0 output-file timecode \"location\""; exit 1; }
 
