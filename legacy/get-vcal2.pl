@@ -187,9 +187,10 @@ sub main()
 #LOCATION="Walla Walla, Washington, USA  118W18 46N05     -8.00"
 
 		my $prefixed_tz = sprintf("%.2f", $tzval / 100);
-		if ($prefixed_tz =~ /\d+.*/)
+		if ($prefixed_tz =~ /\d+/)
 		{
 			$prefixed_tz = sprintf("+%s", $prefixed_tz);
+			printf( "Prefixed %.2f to %s\n", $tzval / 100, $prefixed_tz );
 		}
 		my $location_fmt = sprintf( "%-29.29s %-6.6s %-5.5s %9s",
 			$placename, $geo_hmlon, $geo_hmlat, $prefixed_tz );

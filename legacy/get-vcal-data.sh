@@ -53,12 +53,17 @@ wget -O ${TMPBASE}.p2 \
 
 echo "Waiting a few more seconds to seem less robotic..."
 sleep 7
+echo "${LOCATION}" > ${TMPBASE}.l3
+sed -i 's/\+/%2b/' ${TMPBASE}.l3
+ELOC="$(cat ${TMPBASE}.l3)"
+echo "action=2&timezone=${TIMEZONE}&location=${ELOC} ${URL}"
+echo "action=2&timezone=${TIMEZONE}&location=${LOCATION} ${URL}"
 if wget -O "${OUTPUT}" \
 	--cookies=on --keep-session-cookies --load-cookies=${TMPBASE}.cookies --save-cookies=${TMPBASE}.cookies \
 	--referer="${REFERRER}" --user-agent="${USER_AGENT}" \
 	--header="${ACCEPT}" --header="${ACCEPT_LANGUAGE}" --header="${ACCEPT_ENCODING}" \
 	--header="${ACCEPT_CHARSET}" --header="${KEEP_ALIVE}" \
-	--post-data "action=2&timezone=${TIMEZONE}&location=${LOCATION}&button=Get Calendar" \
+	--post-data "action=2&timezone=${TIMEZONE}&location=${ELOC}&button=Get Calendar" \
 	${URL}
 then
   echo "-- Successfully downloaded --"
