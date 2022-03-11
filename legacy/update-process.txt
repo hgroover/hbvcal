@@ -14,6 +14,8 @@ List of supported zipcodes:
 32615 (Alachua)
 32801 (Orlando)
 IN-741302 (Navadwip)
+IN-110058 (New Delhi)
+UK-SW1A1AA (London, UK)
 
 Dropped as of Feb-2020:
 97212 (Portland)
@@ -57,6 +59,181 @@ etc.
 
 Update get-vcal2.pl and make sure time zone data as well as zip code map are updated
 Follow above process from ./get-vcal2.pl
+
+Locations for time zone 0:00 (Greenwich, UK):
+<select class="cal-select" name="location" size="1">
+<option value="0">Select a nearby location</option>
+<option value="Abidjan, Ivory Coast          004W02 05N19     +0.00">Abidjan, Ivory Coast          004W02 05N19     +0.00</option>
+<option value="Accra, Ghana                  000W13 05N33     +0.00">Accra, Ghana                  000W13 05N33     +0.00</option>
+<option value="Bedford, England, UK          000W29 52N08     +0.00">Bedford, England, UK          000W29 52N08     +0.00</option>
+<option value="Belfast, Northern Ireland     005W55 54N35     +0.00">Belfast, Northern Ireland     005W55 54N35     +0.00</option>
+<option value="Birmingham, England, UK       001W50 52N30     +0.00">Birmingham, England, UK       001W50 52N30     +0.00</option>
+<option value="Bristol, England, UK          002W35 51N27     +0.00">Bristol, England, UK          002W35 51N27     +0.00</option>
+<option value="Cardiff, Wales, UK            003W13 51N30     +0.00">Cardiff, Wales, UK            003W13 51N30     +0.00</option>
+<option value="Cleethorpes, England, UK      000W02 53N34     +0.00">Cleethorpes, England, UK      000W02 53N34     +0.00</option>
+<option value="Coventry, England, UK         001W30 52N25     +0.00">Coventry, England, UK         001W30 52N25     +0.00</option>
+<option value="Derrylin, Northern Ireland    007W34 54N12     +0.00">Derrylin, Northern Ireland    007W34 54N12     +0.00</option>
+<option value="Dublin, Ireland               006W20 53N24     +0.00">Dublin, Ireland               006W20 53N24     +0.00</option>
+<option value="Freetown, Sierra Leone        013W15 08N30     +0.00">Freetown, Sierra Leone        013W15 08N30     +0.00</option>
+<option value="Galway, Ireland               009W03 53N16     +0.00">Galway, Ireland               009W03 53N16     +0.00</option>
+<option value="Glasgow, Scotland, UK         004W15 55N53     +0.00">Glasgow, Scotland, UK         004W15 55N53     +0.00</option>
+<option value="Leeds, England, UK            001W33 53N48     +0.00">Leeds, England, UK            001W33 53N48     +0.00</option>
+<option value="Leicester, England, UK        001W05 52N38     +0.00">Leicester, England, UK        001W05 52N38     +0.00</option>
+<option value="Lisbon, Portugal              009W08 38N44     +0.00">Lisbon, Portugal              009W08 38N44     +0.00</option>
+<option value="Liverpool, England, UK        002W55 53N25     +0.00">Liverpool, England, UK        002W55 53N25     +0.00</option>
+<option value="London, England, UK           000W10 51N30     +0.00">London, England, UK           000W10 51N30     +0.00</option>
+<option value="Manchester, England, UK       002W15 53N30     +0.00">Manchester, England, UK       002W15 53N30     +0.00</option>
+<option value="Newcastle, England, UK        001W35 54N59     +0.00">Newcastle, England, UK        001W35 54N59     +0.00</option>
+<option value="Nkawkaw, Ghana                000W46 06N33     +0.00">Nkawkaw, Ghana                000W46 06N33     +0.00</option>
+<option value="Oporto, Portugal              008W36 41N11     +0.00">Oporto, Portugal              008W36 41N11     +0.00</option>
+<option value="Plymouth, England, UK         004W10 50N23     +0.00">Plymouth, England, UK         004W10 50N23     +0.00</option>
+<option value="Romford, England, UK          000E11 51N35     +0.00">Romford, England, UK          000E11 51N35     +0.00</option>
+<option value="Santa Cruz de Tenerife, Spain 016W14 28N28     +0.00">Santa Cruz de Tenerife, Spain 016W14 28N28     +0.00</option>
+<option value="Takoradi, Ghana               001W55 04N58     +0.00">Takoradi, Ghana               001W55 04N58     +0.00</option>
+<option value="Wexford, Ireland              006W27 52N20     +0.00">Wexford, Ireland              006W27 52N20     +0.00</option>
+<option value="Worcester, England, UK        002W13 52N11     +0.00">Worcester, England, UK        002W13 52N11     +0.00</option>
+<option value="middle, universe              000W00 00N00     +0.00">middle, universe              000W00 00N00     +0.00</option>
+</select>
+
+Locations for time zone 1:00 (Amsterdam, Berlin, Rome):
+<select class="cal-select" name="location" size="1">
+<option value="0">Select a nearby location</option>
+<option value="Abeokuta, Nigeria             003E21 07N09     +1.00">Abeokuta, Nigeria             003E21 07N09     +1.00</option>
+<option value="Amsterdam, Netherlands        004E57 52N22     +1.00">Amsterdam, Netherlands        004E57 52N22     +1.00</option>
+<option value="Antwerp, Belgium              004E25 51N14     +1.00">Antwerp, Belgium              004E25 51N14     +1.00</option>
+<option value="Avesta, Sweden                016E08 60N08     +1.00">Avesta, Sweden                016E08 60N08     +1.00</option>
+<option value="Avignon, France               004E49 43N57     +1.00">Avignon, France               004E49 43N57     +1.00</option>
+<option value="Barcelona, Spain              002E10 41N21     +1.00">Barcelona, Spain              002E10 41N21     +1.00</option>
+<option value="Basel, Switzerland            007E34 47N33     +1.00">Basel, Switzerland            007E34 47N33     +1.00</option>
+<option value="Belgrade, Serbia              020E30 44N49     +1.00">Belgrade, Serbia              020E30 44N49     +1.00</option>
+<option value="Benin City, Nigeria           005E40 06N18     +1.00">Benin City, Nigeria           005E40 06N18     +1.00</option>
+<option value="Bergamo, Italy                009E39 45N43     +1.00">Bergamo, Italy                009E39 45N43     +1.00</option>
+<option value="Bergen, Norway                005E20 60N22     +1.00">Bergen, Norway                005E20 60N22     +1.00</option>
+<option value="Berlin, Germany               013E21 52N33     +1.00">Berlin, Germany               013E21 52N33     +1.00</option>
+<option value="Bern, Switzerland             007E28 46N57     +1.00">Bern, Switzerland             007E28 46N57     +1.00</option>
+<option value="Bologna, Italy                011E22 44N30     +1.00">Bologna, Italy                011E22 44N30     +1.00</option>
+<option value="Bordeaux, France              000W38 44N51     +1.00">Bordeaux, France              000W38 44N51     +1.00</option>
+<option value="Bratislava, Slovak Republic   017E08 48N09     +1.00">Bratislava, Slovak Republic   017E08 48N09     +1.00</option>
+<option value="Bremerhaven, Germany          008E34 53N34     +1.00">Bremerhaven, Germany          008E34 53N34     +1.00</option>
+<option value="Brest, France                 004W31 48N23     +1.00">Brest, France                 004W31 48N23     +1.00</option>
+<option value="Brihuega, Spain               002W52 40N45     +1.00">Brihuega, Spain               002W52 40N45     +1.00</option>
+<option value="Brorup, Denmark               009E01 55N29     +1.00">Brorup, Denmark               009E01 55N29     +1.00</option>
+<option value="Brussels (Bruxelles), Belgium 004E24 50N49     +1.00">Brussels (Bruxelles), Belgium 004E24 50N49     +1.00</option>
+<option value="Budapest, Hungary             019E07 47N28     +1.00">Budapest, Hungary             019E07 47N28     +1.00</option>
+<option value="Buea, Cameroon                009E14 04N09     +1.00">Buea, Cameroon                009E14 04N09     +1.00</option>
+<option value="Cagliari, Italy               009E07 39N13     +1.00">Cagliari, Italy               009E07 39N13     +1.00</option>
+<option value="Catania, Italy                015E08 37N30     +1.00">Catania, Italy                015E08 37N30     +1.00</option>
+<option value="Chateauroux, France           001E41 46N49     +1.00">Chateauroux, France           001E41 46N49     +1.00</option>
+<option value="Copenhagen, Denmark           012E34 55N43     +1.00">Copenhagen, Denmark           012E34 55N43     +1.00</option>
+<option value="Debrecen, Hungary             021E39 47N33     +1.00">Debrecen, Hungary             021E39 47N33     +1.00</option>
+<option value="Dijon, France                 005E01 47N21     +1.00">Dijon, France                 005E01 47N21     +1.00</option>
+<option value="Dole, France                  005E29 47N08     +1.00">Dole, France                  005E29 47N08     +1.00</option>
+<option value="Dresden, Germany              013E42 51N04     +1.00">Dresden, Germany              013E42 51N04     +1.00</option>
+<option value="Dudingen, Switzerland         007E12 46N51     +1.00">Dudingen, Switzerland         007E12 46N51     +1.00</option>
+<option value="Durbuy, Belgium               005E28 50N21     +1.00">Durbuy, Belgium               005E28 50N21     +1.00</option>
+<option value="Enugu, Nigeria                007E28 06N28     +1.00">Enugu, Nigeria                007E28 06N28     +1.00</option>
+<option value="Firenze (Florence), Italy     011E16 43N47     +1.00">Firenze (Florence), Italy     011E16 43N47     +1.00</option>
+<option value="Flensburg, Germany            009E24 54N48     +1.00">Flensburg, Germany            009E24 54N48     +1.00</option>
+<option value="Florence (Firenze), Italy     011E16 43N47     +1.00">Florence (Firenze), Italy     011E16 43N47     +1.00</option>
+<option value="Frankfurt, Germany            008E40 50N07     +1.00">Frankfurt, Germany            008E40 50N07     +1.00</option>
+<option value="Gallivare, Sweden             020E40 67N06     +1.00">Gallivare, Sweden             020E40 67N06     +1.00</option>
+<option value="Gdansk, Poland                018E38 54N21     +1.00">Gdansk, Poland                018E38 54N21     +1.00</option>
+<option value="Geneva, Switzerland           006E09 46N12     +1.00">Geneva, Switzerland           006E09 46N12     +1.00</option>
+<option value="Gothenburg, Sweden            012E00 57N45     +1.00">Gothenburg, Sweden            012E00 57N45     +1.00</option>
+<option value="Granada, Spain                003W41 37N13     +1.00">Granada, Spain                003W41 37N13     +1.00</option>
+<option value="Graz, Austria                 015E24 47N06     +1.00">Graz, Austria                 015E24 47N06     +1.00</option>
+<option value="Guadalajara, Spain            003W09 40N38     +1.00">Guadalajara, Spain            003W09 40N38     +1.00</option>
+<option value="Hamburg, Germany              010E00 53N34     +1.00">Hamburg, Germany              010E00 53N34     +1.00</option>
+<option value="Hannover, Germany             009E43 52N24     +1.00">Hannover, Germany             009E43 52N24     +1.00</option>
+<option value="Haparanda, Sweden             024E05 65N51     +1.00">Haparanda, Sweden             024E05 65N51     +1.00</option>
+<option value="Heidelberg, Germany           008E42 49N25     +1.00">Heidelberg, Germany           008E42 49N25     +1.00</option>
+<option value="Heilbronn, Germany            009E13 49N08     +1.00">Heilbronn, Germany            009E13 49N08     +1.00</option>
+<option value="Horby, Sweden                 013E38 55N52     +1.00">Horby, Sweden                 013E38 55N52     +1.00</option>
+<option value="Ibadan, Nigeria               003E50 07N10     +1.00">Ibadan, Nigeria               003E50 07N10     +1.00</option>
+<option value="Jonkoping, Sweden             014E08 57N48     +1.00">Jonkoping, Sweden             014E08 57N48     +1.00</option>
+<option value="Kaduna, Nigeria               007E25 10N31     +1.00">Kaduna, Nigeria               007E25 10N31     +1.00</option>
+<option value="Kaposvar, Hungary             017E47 46N18     +1.00">Kaposvar, Hungary             017E47 46N18     +1.00</option>
+<option value="Karlsruhe, Germany            008E23 49N01     +1.00">Karlsruhe, Germany            008E23 49N01     +1.00</option>
+<option value="Karlstad, Sweden              013E30 59N25     +1.00">Karlstad, Sweden              013E30 59N25     +1.00</option>
+<option value="Kiel, Germany                 010E08 54N20     +1.00">Kiel, Germany                 010E08 54N20     +1.00</option>
+<option value="Klagenfurt, Austria           014E18 46N38     +1.00">Klagenfurt, Austria           014E18 46N38     +1.00</option>
+<option value="Koblenz, Germany              007E33 50N22     +1.00">Koblenz, Germany              007E33 50N22     +1.00</option>
+<option value="Koln (Cologne), Germany       006E56 50N56     +1.00">Koln (Cologne), Germany       006E56 50N56     +1.00</option>
+<option value="Lagos, Nigeria                003E23 06N27     +1.00">Lagos, Nigeria                003E23 06N27     +1.00</option>
+<option value="Leipzig, Germany              012E20 51N20     +1.00">Leipzig, Germany              012E20 51N20     +1.00</option>
+<option value="Liege, Belgium                005E34 50N39     +1.00">Liege, Belgium                005E34 50N39     +1.00</option>
+<option value="Lille, France                 003E02 50N39     +1.00">Lille, France                 003E02 50N39     +1.00</option>
+<option value="Ljubljana, Slovenia           014E31 46N05     +1.00">Ljubljana, Slovenia           014E31 46N05     +1.00</option>
+<option value="Longwy, France                005E46 49N32     +1.00">Longwy, France                005E46 49N32     +1.00</option>
+<option value="Ludvika, Sweden               015E14 60N09     +1.00">Ludvika, Sweden               015E14 60N09     +1.00</option>
+<option value="Lugano, Switzerland           008E56 46N01     +1.00">Lugano, Switzerland           008E56 46N01     +1.00</option>
+<option value="Lulea, Sweden                 022E08 65N35     +1.00">Lulea, Sweden                 022E08 65N35     +1.00</option>
+<option value="Lund, Sweden                  013E12 55N43     +1.00">Lund, Sweden                  013E12 55N43     +1.00</option>
+<option value="Lyon, France                  004E51 45N46     +1.00">Lyon, France                  004E51 45N46     +1.00</option>
+<option value="Madrid, Spain                 003W41 40N25     +1.00">Madrid, Spain                 003W41 40N25     +1.00</option>
+<option value="Malaga, Spain                 004W26 36N45     +1.00">Malaga, Spain                 004W26 36N45     +1.00</option>
+<option value="Malmo, Sweden                 013E00 55N37     +1.00">Malmo, Sweden                 013E00 55N37     +1.00</option>
+<option value="Marburg, Germany              008E44 50N49     +1.00">Marburg, Germany              008E44 50N49     +1.00</option>
+<option value="Milan, Italy                  009E13 45N28     +1.00">Milan, Italy                  009E13 45N28     +1.00</option>
+<option value="Munchen (Munich), Germany     011E33 48N09     +1.00">Munchen (Munich), Germany     011E33 48N09     +1.00</option>
+<option value="Naples (Napoli), Italy        014E16 40N52     +1.00">Naples (Napoli), Italy        014E16 40N52     +1.00</option>
+<option value="Nice, France                  007E15 43N41     +1.00">Nice, France                  007E15 43N41     +1.00</option>
+<option value="Nurnberg (Nuremberg), Germany 011E03 49N28     +1.00">Nurnberg (Nuremberg), Germany 011E03 49N28     +1.00</option>
+<option value="Opole, Poland                 017E55 50N41     +1.00">Opole, Poland                 017E55 50N41     +1.00</option>
+<option value="Orange, France                004E48 44N10     +1.00">Orange, France                004E48 44N10     +1.00</option>
+<option value="Oristano, Italy               008E36 39N54     +1.00">Oristano, Italy               008E36 39N54     +1.00</option>
+<option value="Osijek, Croatia               018E43 45N34     +1.00">Osijek, Croatia               018E43 45N34     +1.00</option>
+<option value="Oslo, Norway                  010E43 59N56     +1.00">Oslo, Norway                  010E43 59N56     +1.00</option>
+<option value="Ostersund, Sweden             014E41 63N10     +1.00">Ostersund, Sweden             014E41 63N10     +1.00</option>
+<option value="Paderborn, Germany            008E44 51N42     +1.00">Paderborn, Germany            008E44 51N42     +1.00</option>
+<option value="Padua, Italy                  011E53 45N25     +1.00">Padua, Italy                  011E53 45N25     +1.00</option>
+<option value="Paris, France                 002E20 48N50     +1.00">Paris, France                 002E20 48N50     +1.00</option>
+<option value="Passau, Germany               013E28 48N34     +1.00">Passau, Germany               013E28 48N34     +1.00</option>
+<option value="Pisa, Italy                   010E23 43N43     +1.00">Pisa, Italy                   010E23 43N43     +1.00</option>
+<option value="Poitiers, France              000E19 46N37     +1.00">Poitiers, France              000E19 46N37     +1.00</option>
+<option value="Port Harcourt, Nigeria        007E01 04N46     +1.00">Port Harcourt, Nigeria        007E01 04N46     +1.00</option>
+<option value="Prague, Czech Republic        014E25 50N05     +1.00">Prague, Czech Republic        014E25 50N05     +1.00</option>
+<option value="Pula, Croatia                 013E51 44N52     +1.00">Pula, Croatia                 013E51 44N52     +1.00</option>
+<option value="Rijeka, Croatia               014E29 45N22     +1.00">Rijeka, Croatia               014E29 45N22     +1.00</option>
+<option value="Rome, Italy                   012E28 41N55     +1.00">Rome, Italy                   012E28 41N55     +1.00</option>
+<option value="Saarbrucken, Germany          007E00 49N13     +1.00">Saarbrucken, Germany          007E00 49N13     +1.00</option>
+<option value="Salzburg, Austria             013E07 47N52     +1.00">Salzburg, Austria             013E07 47N52     +1.00</option>
+<option value="Salzwedel, Germany            011E08 52N52     +1.00">Salzwedel, Germany            011E08 52N52     +1.00</option>
+<option value="Sarajevo, Bosnia              018E29 45N53     +1.00">Sarajevo, Bosnia              018E29 45N53     +1.00</option>
+<option value="Schaffhausen, Switzerland     008E38 47N42     +1.00">Schaffhausen, Switzerland     008E38 47N42     +1.00</option>
+<option value="Schwerin, Germany             011E23 53N38     +1.00">Schwerin, Germany             011E23 53N38     +1.00</option>
+<option value="Skopje, Macedonia             021E26 41N59     +1.00">Skopje, Macedonia             021E26 41N59     +1.00</option>
+<option value="Sombor, Serbia                019E08 45N47     +1.00">Sombor, Serbia                019E08 45N47     +1.00</option>
+<option value="Split, Croatia                016E26 43N32     +1.00">Split, Croatia                016E26 43N32     +1.00</option>
+<option value="St. Aegyd, Austria            015E32 47N51     +1.00">St. Aegyd, Austria            015E32 47N51     +1.00</option>
+<option value="Stockholm, Sweden             018E05 59N20     +1.00">Stockholm, Sweden             018E05 59N20     +1.00</option>
+<option value="Stuttgart, Germany            009E10 48N47     +1.00">Stuttgart, Germany            009E10 48N47     +1.00</option>
+<option value="Sundsvall, Sweden             017E18 62N22     +1.00">Sundsvall, Sweden             017E18 62N22     +1.00</option>
+<option value="Szczecin, Poland              014E32 53N26     +1.00">Szczecin, Poland              014E32 53N26     +1.00</option>
+<option value="Szolnok, Hungary              020E13 47N12     +1.00">Szolnok, Hungary              020E13 47N12     +1.00</option>
+<option value="Toulouse, France              001E26 43N38     +1.00">Toulouse, France              001E26 43N38     +1.00</option>
+<option value="Trier, Germany                006E38 49N45     +1.00">Trier, Germany                006E38 49N45     +1.00</option>
+<option value="Trnava, Slovak Republic       017E37 48N24     +1.00">Trnava, Slovak Republic       017E37 48N24     +1.00</option>
+<option value="Ulm, Germany                  009E58 48N25     +1.00">Ulm, Germany                  009E58 48N25     +1.00</option>
+<option value="Umea, Sweden                  020E27 63N47     +1.00">Umea, Sweden                  020E27 63N47     +1.00</option>
+<option value="Uppsala, Sweden               017E39 59N52     +1.00">Uppsala, Sweden               017E39 59N52     +1.00</option>
+<option value="Utrecht, Netherlands          005E06 52N05     +1.00">Utrecht, Netherlands          005E06 52N05     +1.00</option>
+<option value="Valencay, France              001E31 47N11     +1.00">Valencay, France              001E31 47N11     +1.00</option>
+<option value="Valencia, Spain               000W24 39N28     +1.00">Valencia, Spain               000W24 39N28     +1.00</option>
+<option value="Vaxjo, Sweden                 014E49 56N52     +1.00">Vaxjo, Sweden                 014E49 56N52     +1.00</option>
+<option value="Vicenza, Italy                011E32 45N33     +1.00">Vicenza, Italy                011E32 45N33     +1.00</option>
+<option value="Vienna, Austria               016E22 48N13     +1.00">Vienna, Austria               016E22 48N13     +1.00</option>
+<option value="Visby, Sweden                 018E20 57N38     +1.00">Visby, Sweden                 018E20 57N38     +1.00</option>
+<option value="Warri, Nigeria                005E45 05N31     +1.00">Warri, Nigeria                005E45 05N31     +1.00</option>
+<option value="Warsaw, Poland                021E00 52N15     +1.00">Warsaw, Poland                021E00 52N15     +1.00</option>
+<option value="Weimar, Germany               011E19 51N00     +1.00">Weimar, Germany               011E19 51N00     +1.00</option>
+<option value="Wiesbaden, Germany            008E15 50N05     +1.00">Wiesbaden, Germany            008E15 50N05     +1.00</option>
+<option value="Wroclaw, Poland               017E02 51N02     +1.00">Wroclaw, Poland               017E02 51N02     +1.00</option>
+<option value="Zagreb, Croatia               016E00 45N53     +1.00">Zagreb, Croatia               016E00 45N53     +1.00</option>
+<option value="Zakopane, Poland              019E57 49N19     +1.00">Zakopane, Poland              019E57 49N19     +1.00</option>
+<option value="Zlin, Czech Republic          017E40 49N13     +1.00">Zlin, Czech Republic          017E40 49N13     +1.00</option>
+<option value="Zurich, Switzerland           008E33 47N10     +1.00">Zurich, Switzerland           008E33 47N10     +1.00</option>
+</select>
 
 Locations for time zone 5:30 (India):
 <select class="cal-select" name="location" size="1">
@@ -115,4 +292,97 @@ Locations for time zone 5:30 (India):
 <option value="Varanasi, India               082E59 25N16     +5.30">Varanasi, India               082E59 25N16     +5.30</option>
 <option value="Vellore, T.N., India          079E08 12N56     +5.30">Vellore, T.N., India          079E08 12N56     +5.30</option>
 <option value="Vrindavan, U.P., India        077E42 27N35     +5.30">Vrindavan, U.P., India        077E42 27N35     +5.30</option>
+</select>
+
+TZ 07:00 (Bangkok, Hanoi):
+<select class="cal-select" name="location" size="1">
+<option value="0">Select a nearby location</option>
+<option value="Abakan, Russia                091E26 53N43     +7.00">Abakan, Russia                091E26 53N43     +7.00</option>
+<option value="Achinsk, Russia               090E30 56N16     +7.00">Achinsk, Russia               090E30 56N16     +7.00</option>
+<option value="Bangkok, Thailand             100E31 13N45     +7.00">Bangkok, Thailand             100E31 13N45     +7.00</option>
+<option value="Bogor, Indonesia              106E47 06S35     +7.00">Bogor, Indonesia              106E47 06S35     +7.00</option>
+<option value="Hanoi, Vietnam                105E51 21N02     +7.00">Hanoi, Vietnam                105E51 21N02     +7.00</option>
+<option value="Jakarta, Indonesia            106E46 06S10     +7.00">Jakarta, Indonesia            106E46 06S10     +7.00</option>
+<option value="Jogjakarta, Indonesia         110E28 07S50     +7.00">Jogjakarta, Indonesia         110E28 07S50     +7.00</option>
+<option value="Kemerovo, Russia              086E05 55N20     +7.00">Kemerovo, Russia              086E05 55N20     +7.00</option>
+<option value="Krasnoyarsk, Russia           092E48 56N05     +7.00">Krasnoyarsk, Russia           092E48 56N05     +7.00</option>
+<option value="Kyzyl, Russia                 094E27 51N42     +7.00">Kyzyl, Russia                 094E27 51N42     +7.00</option>
+<option value="Leninsk-Kuznetsky, Russia     086E10 54N39     +7.00">Leninsk-Kuznetsky, Russia     086E10 54N39     +7.00</option>
+<option value="Novokuznetsk, Russia          087E05 53N44     +7.00">Novokuznetsk, Russia          087E05 53N44     +7.00</option>
+<option value="Novosibirsk, Russia           083E05 55N00     +7.00">Novosibirsk, Russia           083E05 55N00     +7.00</option>
+</select>
+
+TZ 08:00 (Beijing, Kuala Lumpur):
+<select class="cal-select" name="location" size="1">
+<option value="0">Select a nearby location</option>
+<option value="Bali, Indonesia               115E00 08S30     +8.00">Bali, Indonesia               115E00 08S30     +8.00</option>
+<option value="Beijing, China                116E22 39N55     +8.00">Beijing, China                116E22 39N55     +8.00</option>
+<option value="Bratsk, Russia                101E37 56N08     +8.00">Bratsk, Russia                101E37 56N08     +8.00</option>
+<option value="Bukit Mertajam, Malaysia      100E12 05N18     +8.00">Bukit Mertajam, Malaysia      100E12 05N18     +8.00</option>
+<option value="Cagayan, Philippines          124E40 08N24     +8.00">Cagayan, Philippines          124E40 08N24     +8.00</option>
+<option value="Cebu, Philippines             123E54 10N18     +8.00">Cebu, Philippines             123E54 10N18     +8.00</option>
+<option value="Changsha, China               112E23 26N43     +8.00">Changsha, China               112E23 26N43     +8.00</option>
+<option value="Chengdu, China                104E04 30N40     +8.00">Chengdu, China                104E04 30N40     +8.00</option>
+<option value="Denpasar, Indonesia           115E05 08S45     +8.00">Denpasar, Indonesia           115E05 08S45     +8.00</option>
+<option value="Hangzhou, China               120E10 30N15     +8.00">Hangzhou, China               120E10 30N15     +8.00</option>
+<option value="Harbin, China                 126E40 45N48     +8.00">Harbin, China                 126E40 45N48     +8.00</option>
+<option value="Hong Kong, China              114E10 22N15     +8.00">Hong Kong, China              114E10 22N15     +8.00</option>
+<option value="Hualien, Taiwan               121E36 23N59     +8.00">Hualien, Taiwan               121E36 23N59     +8.00</option>
+<option value="Iloilo, Philippines           122E30 10N40     +8.00">Iloilo, Philippines           122E30 10N40     +8.00</option>
+<option value="Ipoh, Malaysia                101E04 04N38     +8.00">Ipoh, Malaysia                101E04 04N38     +8.00</option>
+<option value="Irkutsk, Russia               104E20 52N16     +8.00">Irkutsk, Russia               104E20 52N16     +8.00</option>
+<option value="Jiamusi, China                130E21 46N50     +8.00">Jiamusi, China                130E21 46N50     +8.00</option>
+<option value="Kuala Lumpur, Malaysia        101E42 03N10     +8.00">Kuala Lumpur, Malaysia        101E42 03N10     +8.00</option>
+<option value="Manila, Philippines           121E00 14N35     +8.00">Manila, Philippines           121E00 14N35     +8.00</option>
+<option value="Mudanjiang, China             129E36 44N35     +8.00">Mudanjiang, China             129E36 44N35     +8.00</option>
+<option value="Nanning, China                108E19 22N49     +8.00">Nanning, China                108E19 22N49     +8.00</option>
+<option value="Perak, Malaysia               101E00 05N00     +8.00">Perak, Malaysia               101E00 05N00     +8.00</option>
+<option value="Perth, Australia              115E50 31S56     +8.00">Perth, Australia              115E50 31S56     +8.00</option>
+<option value="Shanghai, China               121E29 31N14     +8.00">Shanghai, China               121E29 31N14     +8.00</option>
+<option value="Singapore                     103E51 01N17     +8.00">Singapore                     103E51 01N17     +8.00</option>
+<option value="Taipei, Taiwan                121E30 25N03     +8.00">Taipei, Taiwan                121E30 25N03     +8.00</option>
+<option value="Ulan-Ude, Russia              107E37 51N50     +8.00">Ulan-Ude, Russia              107E37 51N50     +8.00</option>
+<option value="Xi'an, China                  108E56 34N15     +8.00">Xi'an, China                  108E56 34N15     +8.00</option>
+<option value="Zhangjaikou, China            114E53 40N49     +8.00">Zhangjaikou, China            114E53 40N49     +8.00</option>
+</select>
+
+TZ 09:00 (Seoul, Tokyo):
+<select class="cal-select" name="location" size="1">
+<option value="0">Select a nearby location</option>
+<option value="Chita, Russia                 113E32 51N02     +9.00">Chita, Russia                 113E32 51N02     +9.00</option>
+<option value="Okinawa, Japan                128E00 27N30     +9.00">Okinawa, Japan                128E00 27N30     +9.00</option>
+<option value="Sapporo, Japan                141E10 43N02     +9.00">Sapporo, Japan                141E10 43N02     +9.00</option>
+<option value="Seoul, South Korea            126E58 37N34     +9.00">Seoul, South Korea            126E58 37N34     +9.00</option>
+<option value="Tokyo, Japan                  139E44 35N42     +9.00">Tokyo, Japan                  139E44 35N42     +9.00</option>
+</select>
+
+TZ 10:00 (Brisbane, Hobart):
+<select class="cal-select" name="location" size="1">
+<option value="0">Select a nearby location</option>
+<option value="Bambra, Victoria, Australia   144E03 38S23    +10.00">Bambra, Victoria, Australia   144E03 38S23    +10.00</option>
+<option value="Brisbane, Australia           153E02 27S28    +10.00">Brisbane, Australia           153E02 27S28    +10.00</option>
+<option value="Cairns, Australia             145E46 16S55    +10.00">Cairns, Australia             145E46 16S55    +10.00</option>
+<option value="Canberra, Australia           149E05 35S10    +10.00">Canberra, Australia           149E05 35S10    +10.00</option>
+<option value="Cessnock, N.S.W., Australia   151E26 32S55    +10.00">Cessnock, N.S.W., Australia   151E26 32S55    +10.00</option>
+<option value="Golden Coast, Australia       153E25 27S58    +10.00">Golden Coast, Australia       153E25 27S58    +10.00</option>
+<option value="Khabarovsk, Russia            135E06 48N30    +10.00">Khabarovsk, Russia            135E06 48N30    +10.00</option>
+<option value="Lismore, Australia            153E17 28S48    +10.00">Lismore, Australia            153E17 28S48    +10.00</option>
+<option value="Melbourne, Australia          144E50 37S43    +10.00">Melbourne, Australia          144E50 37S43    +10.00</option>
+<option value="Murwillumbah, Australia       153E24 28S19    +10.00">Murwillumbah, Australia       153E24 28S19    +10.00</option>
+<option value="Port Morseby, Papua New Guinea147E05 09S20    +10.00">Port Morseby, Papua New Guinea147E05 09S20    +10.00</option>
+<option value="Sydney, Australia             151E10 33S55    +10.00">Sydney, Australia             151E10 33S55    +10.00</option>
+<option value="Vladivostok, Russia           132E00 43N15    +10.00">Vladivostok, Russia           132E00 43N15    +10.00</option>
+<option value="Winchelsea, Australia         144E00 38S14    +10.00">Winchelsea, Australia         144E00 38S14    +10.00</option>
+</select>
+
+TZ 12:00 (Fiji, New Zealand):
+<select class="cal-select" name="location" size="1">
+<option value="0">Select a nearby location</option>
+<option value="Auckland, New Zealand         174E41 36S51    +12.00">Auckland, New Zealand         174E41 36S51    +12.00</option>
+<option value="Christchurch, New Zealand     172E37 43S32    +12.00">Christchurch, New Zealand     172E37 43S32    +12.00</option>
+<option value="Labasa, Fiji                  179E30 16S30    +12.00">Labasa, Fiji                  179E30 16S30    +12.00</option>
+<option value="Lautoka, Fiji                 177E28 17S36    +12.00">Lautoka, Fiji                 177E28 17S36    +12.00</option>
+<option value="Suva, Fiji                    178E25 18S08    +12.00">Suva, Fiji                    178E25 18S08    +12.00</option>
+<option value="Tauranga, New Zealand         176E10 37S42    +12.00">Tauranga, New Zealand         176E10 37S42    +12.00</option>
+<option value="Wellington, New Zealand       174E46 41S17    +12.00">Wellington, New Zealand       174E46 41S17    +12.00</option>
 </select>

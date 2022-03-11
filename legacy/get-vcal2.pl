@@ -85,8 +85,9 @@ my %location_data = (
 	"US-33125" => [ "Miami, Florida, USA", "080W15", "25N47", "-5.00", "-0500", "America/New_York" ],
 #	"US-34120" => [ "Naples, Florida, USA", "081W36", "26N17", "-5.00", "-0500", "America/New_York" ],
 	"US-33607" => [ "Tampa, Florida, USA", "082W29", "27N59", "-5.00", "-0500", "America/New_York" ],
-	"IN-741302" => [ "Navadwip, W. Bengal, India", "088E22", "23N25", "+5.30", "+0530", "Asia/Calcutta" ]
-	
+	"IN-741302" => [ "Navadwip, W. Bengal, India", "088E22", "23N25", "+5.30", "+0530", "Asia/Calcutta" ],
+	"IN-110058" => [ "New Delhi, India", "077E12", "28N36", "+5.30", "+0530", "Asia/Calcutta" ],
+	"UK-SW1A1AA" => [ "London, England, UK", "000W10", "51N30", "+0.00", "Europe/London" ]
 );
 
 # Timezone location exceptions
@@ -105,26 +106,6 @@ sub main()
 	die( "No --zip=zipcode specified" ) unless ($zip_hash ne "");
 
 	die( "Location data not defined for zip $zip_hash" ) unless defined( @location_data{$zip_hash} );
-
-#wget -O - http://henrygroover.net/sunrise-rss2?zip=$1 returns
-#...
-#<lcl_place>Oxnard, CA USA</lcl_place>
-#<lcl_state>CA</lcl_state>
-#<lcl_county>Ventura</lcl_county>
-#<lcl_city>Oxnard</lcl_city>
-#<lcl_country>USA</lcl_country>
-#<lcl_tz>-0800</lcl_tz>
-#<lcl_dst>0</lcl_dst>
-#<lcl_lat>34N12'54</lcl_lat>
-#<lcl_lon>119W10'48</lcl_lon>
-#<lcl_geo>LAT 34N12 34.215000 LON 119W10 -119.180000</lcl_geo>
-# We were using lcl_place, lcl_country, lcl_tz and lcl_geo
-# Now we're getting $location_data{$zip_hash}[0] for lcl_place contents;
-# we don't need country as we're now skipping tzlookup and getting the
-# America/New_York etc. code from $location_data{$zip_hash}[5];
-# lcl_tz is now available as $location_data{$zip_hash}[4];
-# and the geo_dlat / geo_dlon values can be parsed from
-# $location_data{$zip_hash}[2] and [1].
 
 	my $placename = $location_data{$zip_hash}[0];
 	my $country = "USA";
@@ -162,30 +143,6 @@ sub main()
 		# Formatted location was used with a previous calendar version that allowed ad-hoc
 		# lat/lon. Now a tzcode and formatted location matching existing list entries must
 		# be used.
-#TIMEZONE=28
-#LOCATION="Los Angeles, California, USA  118W12 34N00     -8.00"
-###########          1    1    2    2    3    3    4    4    55
-###########01234567890    5    0    5    0    5    0    5    01
-# This no longer works, only specific locations are supported. Added columns show lat long in digital format and closest zipcode
-#LOCATION="Arcata, California, USA       124W05 40N52     -8.00"	-124.08333 40.866667	95521 (McKinleyville)
-#LOCATION="Ashcroft, B.C., Canada        121W18 50N49     -8.00"
-#LOCATION="Badger, CA                    119W01 36N38     -8.00"	-119.01667  36.633333	93641 (Miramonte)
-#LOCATION="Berkeley, California, USA     122W17 37N52     -8.00"	-122.28333  37.866667	94702
-#LOCATION="Eugene, Oregon, USA           123W08 44N00     -8.00"	-123.13333  44.000000	97405
-#LOCATION="Juneau, Alaska, USA           134W30 58N26     -8.00"	-134.50000  58.433333	99801
-#LOCATION="Los Angeles, California, USA  118W12 34N00     -8.00"	-118.20000  34.000000	90023
-#LOCATION="Palo Alto, California, USA    122W10 37N28     -8.00"
-#LOCATION="Pinehurst, CA                 119W01 36N42     -8.00"
-#LOCATION="Portland, Oregon, USA         122W38 45N34     -8.00"	-122.63333  45.566667	97212
-#LOCATION="San Diego, California, USA    117W05 32N45     -8.00"	-117.08333  32.750000	92105
-#LOCATION="San Francisco, CA, USA        122W25 37N46     -8.00"	-122.41667  37.766667	94102
-#LOCATION="San Jose, California, USA     121W57 37N22     -8.00"	-121.95000  37.366667	95050 (Santa Clara)
-#LOCATION="Seattle, Washington, USA      122W15 47N37     -8.00"	-122.25000  47.616667	98112
-#LOCATION="Tijuana, Mexico               117W01 32N32     -8.00"
-#LOCATION="Vancouver, Canada             122W57 49N08     -8.00"
-#LOCATION="Victoria, Canada              123W19 48N18     -8.00"
-#LOCATION="Walla Walla, Washington, USA  118W18 46N05     -8.00"
-
 		my $prefixed_tz = sprintf("%.2f", $tzval / 100);
 		if ($prefixed_tz =~ /\d+/)
 		{
