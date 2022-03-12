@@ -145,7 +145,7 @@ sub main()
 		# lat/lon. Now a tzcode and formatted location matching existing list entries must
 		# be used.
 		my $prefixed_tz = sprintf("%.2f", $tzval / 100);
-		if ($prefixed_tz =~ /\d+/)
+		if ($tzval ge 0 && $prefixed_tz =~ /\d+/)
 		{
 			$prefixed_tz = sprintf("+%s", $prefixed_tz);
 			printf( "Prefixed %.2f to %s\n", $tzval / 100, $prefixed_tz );
