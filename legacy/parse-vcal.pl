@@ -358,16 +358,20 @@ sub main()
 				$event_text =~ s/<\/u>//g;
 				$event_text =~ s/<a href=".*">//g;
 				$event_text =~ s/<\/a>//g;
+				# Replace <someone> ~ Appearance with A: <someone>
+				$event_text =~ s/\+(.+) ~ Appearance/A: \1/g;
+				$event_text =~ s/\+(.+) ~ Disappearance/D: \1/g;
 				# Remove "Daylight savings not considered"
+				# Later variant "Daylight-saving time not considered"
 				if ($dst_adjusted)
 				{
 					if ($gmtoff != $ltzm)
 					{
-						$event_text =~ s/Daylight savings not considered(. If in effect, please adjust time. See Calendar Information.)*/DST/g;
+						$event_text =~ s/(Daylight savings|Daylight-saving time) not considered(. If in effect, please adjust time. See Calendar Information.)*/DST/g;
 					}
 					else
 					{
-						$event_text =~ s/Daylight savings not considered(. If in effect, please adjust time. See Calendar Information.)*/no dst/g;
+						$event_text =~ s/(Daylight savings|Daylight-saving time) not considered(. If in effect, please adjust time. See Calendar Information.)*/no dst/g;
 					}
 				}
 				$vtext .= sprintf( "\\n%s", $event_text );
