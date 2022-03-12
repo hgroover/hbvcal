@@ -13,7 +13,8 @@ List of supported zipcodes:
 33607 (Tampa)
 32615 (Alachua)
 32801 (Orlando)
-IN-741302 (Navadwip)
+IN-741302 (Navadwip, WB)
+IN-281121 (Vrindavan, UP)
 IN-110058 (New Delhi)
 UK-SW1A1AA (London, UK)
 
@@ -31,6 +32,10 @@ After fetching the raw file, processing is done via parse-vcal.pl (unless both t
 
 Possible required modules on ubuntu:
 libdbi-perl libmail-sendmail-perl
+
+If using a web interface to install individual Perl packages:
+Mail::Sendmail 
+Date::Format
 
 On henry.groover google calendar account:
 Changed as of 2020: Go to calendar, settings, import
