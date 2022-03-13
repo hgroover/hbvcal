@@ -70,6 +70,7 @@ $tcodelookup{"-1000"} = "210"; # Hawaii
 my %location_data = (
 # 13-Mar-2022 - added many entries in timecode order + placename lexical order, which starts from 0 and goes east,
 # then jumps to western timezones starting with 20
+# Created by convert-places.pl v1.01 from places-000.txt
   "UK-B82QE" => [ "Birmingham, England, UK", "001W50", "52N30", "+0.00", "+0000", "Europe/London" ], # https://google.com/maps/@52.500000,-1.833333,15z
   "UK-BS16QF" => [ "Bristol, England, UK", "002W35", "51N27", "+0.00", "+0000", "Europe/London" ], # https://google.com/maps/@51.450000,-2.583333,15z
   "UK-CF142QQ" => [ "Cardiff, Wales, UK", "003W13", "51N30", "+0.00", "+0000", "Europe/London" ], # https://google.com/maps/@51.500000,-3.216667,15z
@@ -164,10 +165,14 @@ sub main()
 		# lat/lon. Now a tzcode and formatted location matching existing list entries must
 		# be used.
 		my $prefixed_tz = sprintf("%.2f", $tzval / 100);
-		if ($tzval ge 0 && $prefixed_tz =~ /\d+/)
+		if ($tzval >= 0)
 		{
 			$prefixed_tz = sprintf("+%s", $prefixed_tz);
 			printf( "Prefixed %.2f to %s\n", $tzval / 100, $prefixed_tz );
+		}
+		else
+		{
+			printf( "Prefixed %.2f to %s :: %d >= 0 (already signed negative)\n", $tzval / 100, $prefixed_tz, $tzval );
 		}
 		my $location_fmt = sprintf( "%-29.29s %-6.6s %-5.5s %9s",
 			$placename, $geo_hmlon, $geo_hmlat, $prefixed_tz );
