@@ -68,7 +68,30 @@ $tcodelookup{"-1000"} = "210"; # Hawaii
 #  [4] = tzhhmm "-0600" (lcl_tz) (new)
 #  [5] = tzregion "America/New_York" (new)
 my %location_data = (
-	"US-95521" => [ "Arcata, California, USA", "124W05", "40N52", "-8.00", "-0800", "America/Los_Angeles" ],
+# 13-Mar-2022 - added many entries in timecode order + placename lexical order, which starts from 0 and goes east,
+# then jumps to western timezones starting with 20
+  "UK-B82QE" => [ "Birmingham, England, UK", "001W50", "52N30", "+0.00", "+0000", "Europe/London" ], # https://google.com/maps/@52.500000,-1.833333,15z
+  "UK-BS16QF" => [ "Bristol, England, UK", "002W35", "51N27", "+0.00", "+0000", "Europe/London" ], # https://google.com/maps/@51.450000,-2.583333,15z
+  "UK-CF142QQ" => [ "Cardiff, Wales, UK", "003W13", "51N30", "+0.00", "+0000", "Europe/London" ], # https://google.com/maps/@51.500000,-3.216667,15z
+  "IE-9MX6G8" => [ "Dublin, Ireland", "006W20", "53N24", "+0.00", "+0000", "Europe/Dublin" ], # https://google.com/maps/@53.400000,-6.333333,15z
+  "UK-SW1A1AA" => [ "London, England, UK", "000W10", "51N30", "+0.00", "+0000", "Europe/London" ], # https://google.com/maps/@51.500000,-0.166667,15z
+# Created by convert-places.pl v1.01 from places-001.txt
+  "NL-1094CC" => [ "Amsterdam, Netherlands", "004E57", "52N22", "+1.00", "+0100", "Europe/Amsterdam" ], # https://google.com/maps/@52.366667,4.950000,15z
+  "RS-11060" => [ "Belgrade, Serbia", "020E30", "44N49", "+1.00", "+0100", "Europe/Belgrade" ], # https://google.com/maps/@44.816667,20.500000,15z
+  "DE-13351" => [ "Berlin, Germany", "013E21", "52N33", "+1.00", "+0100", "Europe/Berlin" ], # https://google.com/maps/@52.550000,13.350000,15z
+  "ES-19400" => [ "Brihuega, Spain", "002W52", "40N45", "+1.00", "+0100", "Europe/Madrid" ], # https://google.com/maps/@40.750000,-2.866667,15z
+  "DE-80636" => [ "Munchen (Munich), Germany", "011E33", "48N09", "+1.00", "+0100", "Europe/Berlin" ], # https://google.com/maps/@48.150000,11.550000,15z
+  "IT-80139" => [ "Naples (Napoli), Italy", "014E16", "40N52", "+1.00", "+0100", "Europe/Rome" ], # https://google.com/maps/@40.866667,14.266667,15z
+  "FR-75014" => [ "Paris, France", "002E20", "48N50", "+1.00", "+0100", "Europe/Paris" ], # https://google.com/maps/@48.833333,2.333333,15z
+  "IT-00195" => [ "Rome, Italy", "012E28", "41N55", "+1.00", "+0100", "Europe/Rome" ], # https://google.com/maps/@41.916667,12.466667,15z
+  "SE-11451" => [ "Stockholm, Sweden", "018E05", "59N20", "+1.00", "+0100", "Europe/Stockholm" ], # https://google.com/maps/@59.333333,18.083333,15z
+  "AT-1090" => [ "Vienna, Austria", "016E22", "48N13", "+1.00", "+0100", "Europe/Vienna" ], # https://google.com/maps/@48.216667,16.366667,15z
+  "PL-00227" => [ "Warsaw, Poland", "021E00", "52N15", "+1.00", "+0100", "Europe/Warsaw" ], # https://google.com/maps/@52.250000,21.000000,15z
+  "CH-6319" => [ "Zurich, Switzerland", "008E33", "47N10", "+1.00", "+0100", "Europe/Zurich" ], # https://google.com/maps/@47.166667,8.550000,15z
+	"IN-741302" => [ "Navadwip, W. Bengal, India", "088E22", "23N25", "+5.30", "+0530", "Asia/Calcutta" ],
+	"IN-110058" => [ "New Delhi, India", "077E12", "28N36", "+5.30", "+0530", "Asia/Calcutta" ],
+	"IN-281121" => [ "Vrindavan, U.P., India", "077E42", "27N35", "+5.30", "+0530", "Asia/Calcutta" ],
+    "US-95521" => [ "Arcata, California, USA", "124W05", "40N52", "-8.00", "-0800", "America/Los_Angeles" ],
 	"US-93641" => [ "Badger, CA", "119W01", "36N38", "-8.00", "-0800", "America/Los_Angeles" ],
 	"US-94702" => [ "Berkeley, California, USA", "122W17", "37N52", "-8.00", "-0800", "America/Los_Angeles" ],
 	"US-97405" => [ "Eugene, Oregon, USA", "123W08", "44N00", "-8.00", "-0800", "America/Los_Angeles" ],
@@ -84,11 +107,7 @@ my %location_data = (
 	"US-32801" => [ "Orlando, Florida, USA", "081W23", "28N32", "-5.00", "-0500", "America/New_York" ],
 	"US-33125" => [ "Miami, Florida, USA", "080W15", "25N47", "-5.00", "-0500", "America/New_York" ],
 #	"US-34120" => [ "Naples, Florida, USA", "081W36", "26N17", "-5.00", "-0500", "America/New_York" ],
-	"US-33607" => [ "Tampa, Florida, USA", "082W29", "27N59", "-5.00", "-0500", "America/New_York" ],
-	"IN-741302" => [ "Navadwip, W. Bengal, India", "088E22", "23N25", "+5.30", "+0530", "Asia/Calcutta" ],
-	"IN-110058" => [ "New Delhi, India", "077E12", "28N36", "+5.30", "+0530", "Asia/Calcutta" ],
-	"IN-281121" => [ "Vrindavan, U.P., India", "077E42", "27N35", "+5.30", "+0530", "Asia/Calcutta" ],
-	"UK-SW1A1AA" => [ "London, England, UK", "000W10", "51N30", "+0.00", "+0000", "Europe/London" ]
+	"US-33607" => [ "Tampa, Florida, USA", "082W29", "27N59", "-5.00", "-0500", "America/New_York" ]
 );
 
 # Timezone location exceptions
