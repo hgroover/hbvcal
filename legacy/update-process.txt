@@ -70,7 +70,7 @@ To build lists of data for updating place names:
 This will fetch the raw html. Edit out everything but the <option value=' list.
 
 Fetch location lists like the following using a shell command like:
-for t in 24 25 26 27 210; do tc=$(printf "%03d" $t); ./get-vcal-data.sh places-${tc}.txt $t place-list; grep '<option value="' places-${tc}.txt > places-${tc}.html; done
+for t in 24 25 26 27 28 210; do tc=$(printf "%03d" $t); ./get-vcal-data.sh places-${tc}.txt $t place-list; ./convert-places.pl --input=places-${tc}.txt >> locations.txt; done
 
 Run
 ./convert-places.pl --input=places-000.txt
