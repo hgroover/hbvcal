@@ -89,9 +89,19 @@ my %location_data = (
   "AT-1090" => [ "Vienna, Austria", "016E22", "48N13", "+1.00", "+0100", "Europe/Vienna" ], # https://google.com/maps/@48.216667,16.366667,15z
   "PL-00227" => [ "Warsaw, Poland", "021E00", "52N15", "+1.00", "+0100", "Europe/Warsaw" ], # https://google.com/maps/@52.250000,21.000000,15z
   "CH-6319" => [ "Zurich, Switzerland", "008E33", "47N10", "+1.00", "+0100", "Europe/Zurich" ], # https://google.com/maps/@47.166667,8.550000,15z
+# Created by convert-places.pl v1.01 from places-550.txt
 	"IN-741302" => [ "Navadwip, W. Bengal, India", "088E22", "23N25", "+5.30", "+0530", "Asia/Calcutta" ],
 	"IN-110058" => [ "New Delhi, India", "077E12", "28N36", "+5.30", "+0530", "Asia/Calcutta" ],
 	"IN-281121" => [ "Vrindavan, U.P., India", "077E42", "27N35", "+5.30", "+0530", "Asia/Calcutta" ],
+# Created by convert-places.pl v1.01 from places-025.txt
+	"US-32615" => [ "Alachua, Florida, USA", "082W30", "29N48", "-5.00", "-0500", "America/New_York" ],
+	"US-32801" => [ "Orlando, Florida, USA", "081W23", "28N32", "-5.00", "-0500", "America/New_York" ],
+	"US-33125" => [ "Miami, Florida, USA", "080W15", "25N47", "-5.00", "-0500", "America/New_York" ],
+#	"US-34120" => [ "Naples, Florida, USA", "081W36", "26N17", "-5.00", "-0500", "America/New_York" ],
+	"US-33607" => [ "Tampa, Florida, USA", "082W29", "27N59", "-5.00", "-0500", "America/New_York" ],
+# Created by convert-places.pl v1.01 from places-026.txt
+	"US-78721" => [ "Austin, Texas, USA", "097W41", "30N16", "-6.00", "-0600", "America/Chicago" ],
+# Created by convert-places.pl v1.01 from places-028.txt	
     "US-95521" => [ "Arcata, California, USA", "124W05", "40N52", "-8.00", "-0800", "America/Los_Angeles" ],
 	"US-93641" => [ "Badger, CA", "119W01", "36N38", "-8.00", "-0800", "America/Los_Angeles" ],
 	"US-94702" => [ "Berkeley, California, USA", "122W17", "37N52", "-8.00", "-0800", "America/Los_Angeles" ],
@@ -102,13 +112,7 @@ my %location_data = (
 	"US-92105" => [ "San Diego, California, USA", "117W05", "32N45", "-8.00", "-0800", "America/Los_Angeles" ],
 	"US-94102" => [ "San Francisco, CA, USA", "122W25", "37N46", "-8.00", "-0800", "America/Los_Angeles" ],
 	"US-95050" => [ "San Jose, California, USA", "121W57", "37N22", "-8.00", "-0800", "America/Los_Angeles" ],
-	"US-98112" => [ "Seattle, Washington, USA", "122W15", "47N37", "-8.00", "-0800", "America/Los_Angeles" ],
-	"US-78721" => [ "Austin, Texas, USA", "097W41", "30N16", "-6.00", "-0600", "America/Chicago" ],
-	"US-32615" => [ "Alachua, Florida, USA", "082W30", "29N48", "-5.00", "-0500", "America/New_York" ],
-	"US-32801" => [ "Orlando, Florida, USA", "081W23", "28N32", "-5.00", "-0500", "America/New_York" ],
-	"US-33125" => [ "Miami, Florida, USA", "080W15", "25N47", "-5.00", "-0500", "America/New_York" ],
-#	"US-34120" => [ "Naples, Florida, USA", "081W36", "26N17", "-5.00", "-0500", "America/New_York" ],
-	"US-33607" => [ "Tampa, Florida, USA", "082W29", "27N59", "-5.00", "-0500", "America/New_York" ]
+	"US-98112" => [ "Seattle, Washington, USA", "122W15", "47N37", "-8.00", "-0800", "America/Los_Angeles" ]
 );
 
 # Timezone location exceptions
