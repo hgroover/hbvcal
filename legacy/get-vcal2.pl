@@ -97,22 +97,26 @@ my %location_data = (
 	"US-32615" => [ "Alachua, Florida, USA", "082W30", "29N48", "-5.00", "-0500", "America/New_York" ],
 	"US-32801" => [ "Orlando, Florida, USA", "081W23", "28N32", "-5.00", "-0500", "America/New_York" ],
 	"US-33125" => [ "Miami, Florida, USA", "080W15", "25N47", "-5.00", "-0500", "America/New_York" ],
-#	"US-34120" => [ "Naples, Florida, USA", "081W36", "26N17", "-5.00", "-0500", "America/New_York" ],
+#	"US-34120" => [ "Naples, Florida, USA", "081W32", "26N20", "-5.00", "-0500", "America/New_York" ],
 	"US-33607" => [ "Tampa, Florida, USA", "082W29", "27N59", "-5.00", "-0500", "America/New_York" ],
 # Created by convert-places.pl v1.01 from places-026.txt
 	"US-78721" => [ "Austin, Texas, USA", "097W41", "30N16", "-6.00", "-0600", "America/Chicago" ],
 # Created by convert-places.pl v1.01 from places-028.txt	
     "US-95521" => [ "Arcata, California, USA", "124W05", "40N52", "-8.00", "-0800", "America/Los_Angeles" ],
-	"US-93641" => [ "Badger, CA", "119W01", "36N38", "-8.00", "-0800", "America/Los_Angeles" ],
+    "US-93641" => [ "Badger, California, USA", "119W01", "36N38", "-8.00", "-0800", "America/Los_Angeles" ], # https://google.com/maps/@36.633333,-119.016667,15z
 	"US-94702" => [ "Berkeley, California, USA", "122W17", "37N52", "-8.00", "-0800", "America/Los_Angeles" ],
 	"US-97405" => [ "Eugene, Oregon, USA", "123W08", "44N00", "-8.00", "-0800", "America/Los_Angeles" ],
 	"US-99801" => [ "Juneau, Alaska, USA", "134W30", "58N26", "-8.00", "-0900", "America/Juneau" ], # Lie! Juneau is GMT-9, not GMT-8
 	"US-90023" => [ "Los Angeles, California, USA", "118W12", "34N00", "-8.00", "-0800", "America/Los_Angeles" ],
-	"US-97212" => [ "Portland, Oregon, USA", "122W38", "45N34", "-8.00", "-0800", "America/Los_Angeles" ],
+	"US-97212" => [ "Portland, Oregon, USA", "122W41", "45N31", "-8.00", "-0800", "America/Los_Angeles" ], # https://google.com/maps/@45.516667,-122.683333,15z
 	"US-92105" => [ "San Diego, California, USA", "117W05", "32N45", "-8.00", "-0800", "America/Los_Angeles" ],
 	"US-94102" => [ "San Francisco, CA, USA", "122W25", "37N46", "-8.00", "-0800", "America/Los_Angeles" ],
 	"US-95050" => [ "San Jose, California, USA", "121W57", "37N22", "-8.00", "-0800", "America/Los_Angeles" ],
-	"US-98112" => [ "Seattle, Washington, USA", "122W15", "47N37", "-8.00", "-0800", "America/Los_Angeles" ]
+	"US-98112" => [ "Seattle, Washington, USA", "122W20", "47N36", "-8.00", "-0800", "America/Los_Angeles" ], # https://google.com/maps/@47.600000,-122.333333,15z
+# Created by convert-places.pl v1.01 from places-210.txt
+  "US-96720" => [ "Hilo, Hawaii, USA", "155W02", "19N45", "-10.00", "-1000", "Pacific/Honolulu" ], # https://google.com/maps/@19.750000,-155.033333,15z
+  "US-96797" => [ "Honolulu, Hawaii, USA", "157W59", "21N25", "-10.00", "-1000", "Pacific/Honolulu" ] # https://google.com/maps/@21.416667,-157.983333,15z
+
 );
 
 # Timezone location exceptions
