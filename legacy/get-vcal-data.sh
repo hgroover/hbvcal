@@ -45,7 +45,7 @@ wget -O ${TMPBASE}.p2 \
 	--post-data "action=1&timezone=${TIMEZONE}&button=Submit Time Zone" \
 	${URL} || { echo "Failed to get second page - output in ${TMPBASE}.*"; exit 1; }
 [ "${LOCATION}" = "place-list" ] && {
-  echo "Copying place list for timezone code ${TIMEZON} to ${OUTPUT}"
+  echo "Copying place list for timezone code ${TIMEZONE} to ${OUTPUT}"
   mv ${TMPBASE}.p2 "${OUTPUT}"
   rm ${TMPBASE}.*
   exit 0
