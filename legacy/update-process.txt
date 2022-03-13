@@ -1,18 +1,18 @@
 vcal update process
 
-11-March-2022 update - although we still support bare US zipcodes, the "zipcode" parameter
+11-March-2022 update - the "zipcode" parameter
 now refers to a code made of the two-letter ISO-639 country code followed by hyphen and the
 closest in-country postal code. Thus, for example, Navadwip is now IN-741302
 
 List of supported zipcodes:
-92105 (San Diego)
-94102 (San Francisco)
-90023 (Los Angeles)
-78721 (Austin)
-33125 (Miami)
-33607 (Tampa)
-32615 (Alachua)
-32801 (Orlando)
+US-92105 (San Diego)
+US-94102 (San Francisco)
+US-90023 (Los Angeles)
+US-78721 (Austin)
+US-33125 (Miami)
+US-33607 (Tampa)
+US-32615 (Alachua)
+US-32801 (Orlando)
 IN-741302 (Navadwip, WB)
 IN-281121 (Vrindavan, UP)
 IN-110058 (New Delhi)
@@ -59,11 +59,22 @@ Top entry from results should be closest
 
 Outside US:
 Look on Google Maps. Find a postal code from the selected location. Construct XX-pcode
-where XX is the two-letter ISO-639 country code, e.g. IN for India, UK for United Kingdom,
-etc.
+where XX is the two-letter ISO-3166 country code, e.g. IN for India, UK for United Kingdom,
+etc. Remove spaces and other punctuation from the postal code.
 
 Update get-vcal2.pl and make sure time zone data as well as zip code map are updated
 Follow above process from ./get-vcal2.pl
+
+To build lists of data for updating place names:
+./get-vcal-data.sh timecodes.txt list 1
+This will fetch the raw html. Edit out everything but the <option value=' list.
+
+Fetch location lists like the following using a shell command like:
+for t in 24 25 26 27 210; do tc=$(printf "%03d" $t); ./get-vcal-data.sh places-${tc}.txt $t place-list; grep '<option value="' places-${tc}.txt > places-${tc}.html; done
+
+Run
+./convert-places.pl --input=places-000.txt
+to get output in a form ready for further editing (tzdata entry, country code and postal code).
 
 Locations for time zone 0:00 (Greenwich, UK):
 <select class="cal-select" name="location" size="1">
