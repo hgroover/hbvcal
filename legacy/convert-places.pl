@@ -14,6 +14,7 @@ my $output = ""; # unused
 
 # Version history:
 # 1.01 Initial implementation 13-Mar-2022
+# 1.02 Fixed location parsing 13-Mar-2022
 my $version = "1.01";
 
 # 0 for normal operation
@@ -29,7 +30,7 @@ sub main()
 {
 	die( "No --input=filename specified" ) unless ($input ne "");
 	open( INPUT, "<$input" ) or die( "Failed to open $input: $!" );
-	printf "# Raw entries for merging into location_data in get-vcal2.pl\n# Created by convert-places.pl v%s\n", $version;
+	printf "# Raw entries for merging into location_data in get-vcal2.pl\n# Created by convert-places.pl v%s from %s\n", $version, $input;
 
 	# Usage: run ./get-vcal-data.sh places-000.txt 0 place-list
 	# then ./convert-places.pl --input=places-000.txt
@@ -38,7 +39,7 @@ sub main()
 	# <option value="Romford, England, UK          000E11 51N35     +0.00" >Romford, England, UK          000E11 51N35     +0.00</option>
 	# <option value="Santa Cruz de Tenerife, Spain 016W14 28N28     +0.00" >Santa Cruz de Tenerife, Spain 016W14 28N28     +0.00</option>
 	# ...............0123456789|123456789|123456789|123456789|123456789|1
-	#               (.............................)\s
+	#               (..............................)
 	#                                             (......)\s(.....)\s+(\S+)
 	# Length: 52
 	# Expected output:
@@ -64,7 +65,7 @@ sub main()
 				printf "# Ignoring length %d: %s\n", length($value), $value;
 				next;
 			}
-			if ($value =~ /(.............................)\s(......)\s(.....)\s+(\S+)/)
+			if ($value =~ /(..............................)(......)\s(.....)\s+(\S+)/)
 			{
 				my $pn = $1;
 				my $lon = $2;
@@ -85,18 +86,18 @@ sub main()
 					$tzf = $3;
 					$tzhhmm = sprintf("%s%02d%02d", $tzs, $tzt, $tzf);
 				}
-				printf "  \"%s-%s\" => [ \"%s\", \"%s\", \"%s\", \"%s\", \"%s\", \"UTC\" ], # %s\n", $cc, $pc, $pn, $lon, $lat, $dtz, $tzhhmm, $url;
+				printf "#  \"%s-%s\" => [ \"%s\", \"%s\", \"%s\", \"%s\", \"%s\", \"UTC\" ], # %s\n", $cc, $pc, $pn, $lon, $lat, $dtz, $tzhhmm, $url;
 			}
 			else
 			{
-				printf "# Parse failed: %s\n", $value;
+				printf "####### Parse failed: %s\n", $value;
 				next;
 			}
 			$count++;
 		}
 	}
 
-	printf "# %d entries\n", $count;
+	printf "# %d entries from %s\n", $count, $input;
 
 	close( INPUT );
 }
