@@ -1,8 +1,9 @@
 vcal update process
 
 11-March-2022 update - the "zipcode" parameter
-now refers to a code made of the two-letter ISO-639 country code followed by hyphen and the
-closest in-country postal code. Thus, for example, Navadwip is now IN-741302
+now refers to a code made of the two-letter ISO-639 country code 
+followed by hyphen and the closest in-country postal code. Thus, 
+for example, Navadwip is now IN-741302
 
 List of supported zipcodes:
 US-92105 (San Diego)
@@ -17,6 +18,22 @@ IN-741302 (Navadwip, WB)
 IN-281121 (Vrindavan, UP)
 IN-110058 (New Delhi)
 UK-SW1A1AA (London, UK)
+UK-B82QE (Birmingham, England, UK)
+UK-BS16QF (Bristol, England, UK)
+UK-CF142QQ (Cardiff, Wales, UK)
+IE-9MX6G8 (Dublin, Ireland)
+NL-1094CC (Amsterdam, Netherlands)
+RS-11060 (Belgrade, Serbia)
+DE-13351 (Berlin, Germany)
+ES-19400 (Brihuega, Spain)
+DE-80636 (Munchen (Munich), Germany)
+IT-80139 (Naples (Napoli), Italy)
+FR-75014 (Paris, France)
+IT-00195 (Rome, Italy)
+SE-11451 (Stockholm, Sweden)
+AT-1090 (Vienna, Austria)
+PL-00227 (Warsaw, Poland)
+CH-6319 (Zurich, Switzerland)
 
 Dropped as of Feb-2020:
 97212 (Portland)
@@ -24,7 +41,7 @@ Dropped as of Feb-2020:
 In
 ~/Documents/vcal
 
-About 1x year; last run, Feb 2022:
+About 1x year; last run, Mar 2023:
 ./get-vcal2.pl --zip=US-78721
 (should get .vcal-data/78721-start-end.{ics,raw,txt})
 If .vcal-data/78721-start-end.raw already exists, we'll skip the download
