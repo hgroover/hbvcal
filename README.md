@@ -6,7 +6,7 @@ and use master for releases.
 
 This GPL2 project includes code and references to create an open-source,
 reusable core to calculate the Vaishnava calendar with tithi rules applied
-according to the Sanskrit book Sri Hari-bhakti-vilasa by Sri Gopal Bhatta
+according to the Sanskrit book Sri Hari-bhakti-vilasa by Sri Sanatan
 Goswami. This was compiled some time in the 1600s. We are using a fairly
 recent edition with the original Sanskrit in Devanagari with Hindi translation
 and commentary published by Sri Haridas Shastri, Radhakund, UP, India.
